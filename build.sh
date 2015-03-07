@@ -6,7 +6,7 @@
 # NOTE: ARMv7 is available since S5L8920 ( iPhone 3GS )
 # So I see no reason to support armv6
 #
-ARCHS="i386 armv7 armv7s arm64"
+ARCHS="x86_64 i386 armv7 armv7s arm64"
 VERSION="1.0.2"
 SDKVER="8.1"
 CP=`pwd`
@@ -30,7 +30,7 @@ cd "${CP}/src/openssl-${VERSION}"
  
 for ARCH in ${ARCHS}
 do
-  if [[ "${ARCH}" == "i386" ]];
+  if [[ "${ARCH}" == "i386" || "${ARCH}" == "x86_64" ]];
   then
     PLATFORM="iPhoneSimulator"
   else

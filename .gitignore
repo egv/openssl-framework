@@ -1,3 +1,7 @@
 *.gz
 framework
 *.framework.zip
+bin
+include
+lib
+openssl.framework
